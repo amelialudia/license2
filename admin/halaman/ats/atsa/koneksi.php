@@ -206,3 +206,4 @@ function delete($id)
     mysqli_query($koneksi, "DELETE FROM atsa WHERE id = $id");
     return mysqli_affected_rows($koneksi);
 }
+

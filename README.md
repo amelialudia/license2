@@ -1,2 +1,2 @@
-# license2
-kumpulan lisensi 
+# license
+web lisensi

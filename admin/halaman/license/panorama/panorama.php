@@ -34,10 +34,11 @@ if( isset($_POST['cari']) ) {
         <form action="" method="POST" class="pull-right position search_inbox">
             <div class="input-append">
                 <input type="text" class="sr-input" placeholder="Search" name="katakunci">
-                <button class="btn sr-btn" type="SUBMIT" name="cari"><i class="fa fa-search"></i></button>
-                
+                <button class="btn sr-btn" type="SUBMIT" name="cari"><i class="fa fa-search"></i></button><br>
+            <div><a href="index.php?page=exportpanorama">
+                <button class="btn btn-primary" id="cetak"> Cetak Data </button></a></div> <br>
             </div>
-        </form>
+</form>
         <br><br>
         <div><a href="index.php?page=tambahpanorama">
             <button class= "btn btn-primary" id= "tambah"> Tambah Data </button></a></div> <br>

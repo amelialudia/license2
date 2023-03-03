@@ -37,9 +37,15 @@ function tambah($data)
 
     // htmlspecialchars() = agar tag html di program tidak akan dijalankan
     $name = htmlspecialchars($data['name']);
+    $jenis = htmlspecialchars($data['jenis']);
+    $tipe_lisensi = htmlspecialchars($data['tipe_lisensi']);
     $Expiration = date($data['Expiration']);
-       
-    $sql = "INSERT INTO fortianalyzer VALUES ('', '$name',  '$Expiration')";
+    $status = htmlspecialchars($data['status']);
+    $start_ats = date($data['start_ats']);
+    $end_ats = date($data['end_ats']);
+    $versi = htmlspecialchars($data['versi']);
+
+    $sql = "INSERT INTO fortianalyzer VALUES ('', '$name', '$jenis', '$tipe_lisensi', '$Expiration', '$status', '$start_ats', '$end_ats', '$versi')";
 
     mysqli_query($koneksi, $sql);
 
@@ -54,7 +60,13 @@ function edit($data)
     $id = $data['id'];
     // htmlspecialchars() = agar tag html di program tidak akan dijalankan
     $name = htmlspecialchars($data['name']);
+    $jenis = htmlspecialchars($data['jenis']);
+    $tipe_lisensi = htmlspecialchars($data['tipe_lisensi']);
     $Expiration = date($data['Expiration']);
+    $status = htmlspecialchars($data['status']);
+    $start_ats = date($data['start_ats']);
+    $end_ats = date($data['end_ats']);
+    $versi = htmlspecialchars($data['versi']);
     
     //cek apakah user upload foto baru atau tidak
     
@@ -62,7 +74,13 @@ function edit($data)
     $sql = "UPDATE fortianalyzer SET 
     
                 name = '$name',
-                Expiration = '$Expiration'
+                jenis = '$jenis',
+                tipe_lisensi = '$tipe_lisensi',
+                Expiration = '$Expiration',
+                status = '$status',
+                start_ats = '$start_ats',
+                end_ats = '$end_ats',
+                versi = '$versi'
                 
             WHERE id = $id ";
 
@@ -168,7 +186,14 @@ function pencarian($katakunci)
     $query = "SELECT * FROM fortianalyzer
                 WHERE
 				name LIKE '%$katakunci%' OR
-				Expiration LIKE '%$katakunci%'
+				jenis LIKE '%$katakunci%' OR
+				tipe_lisensi LIKE '%$katakunci%' OR
+				Quantity LIKE '%$katakunci%' OR
+				Expiration LIKE '%$katakunci%' OR
+				status LIKE '%$katakunci%' OR
+				start_ats LIKE '%$katakunci%' OR
+				end_ats LIKE '%$katakunci%' OR
+				versi LIKE '%$katakunci%'
             ";
     
     // mengembalikkan fungsi yg sudah di buat(function query) di dalam fungsi pencarian

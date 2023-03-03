@@ -27,15 +27,16 @@ if( isset($_POST['cari']) ) {
 
 ?>
 
-<h3><i class="fa fa-angle-right"></i> License NGTM01</h3>
+<h3><i class="fa fa-angle-right"></i> License DNS</h3>
 <div class="row mb">
     <!-- page start-->
     <div class="content-panel">
         <form action="" method="POST" class="pull-right position search_inbox">
             <div class="input-append">
                 <input type="text" class="sr-input" placeholder="Search" name="katakunci">
-                <button class="btn sr-btn" type="SUBMIT" name="cari"><i class="fa fa-search"></i></button>
-                
+                <button class="btn sr-btn" type="SUBMIT" name="cari"><i class="fa fa-search"></i></button><br>
+            <div><a href="index.php?page=exportngtm01">
+                <button class="btn btn-primary" id="cetak"> Cetak Data </button></a></div> <br>
             </div>
         </form>
         <br><br>
@@ -48,16 +49,25 @@ if( isset($_POST['cari']) ) {
                     <tr>
                         <th>#</th>
                         <th>
-                            <center>Name</center>
+                            <center>Nama</center>
                         </th>
                         <th>
-                            <center>Contents</center>
+                            <center>DNS</center>
                         </th>
                         <th>
-                            <center>Common Name</center>
+                            <center>Tipe Lisensi</center>
+                        </th>
+                        <th>
+                            <center>Mulai ATS</center>
+                        </th>
+                        <th>
+                            <center>Akhir ATS</center>
                         </th>
                         <th>
                             <center>Expiration</center>
+                        </th>
+                        <th>
+                            <center>Versi</center>
                         </th>
                         <th>
                             <center>Action</center>
@@ -70,9 +80,12 @@ if( isset($_POST['cari']) ) {
                     <tr>
                         <td> <?= $x; ?> </td>
                         <td> <?= nl2br(htmlspecialchars($data['name'])); ?> </td>
-                        <td> <?= nl2br(htmlspecialchars($data['contents'])); ?> </td>
                         <td> <?= nl2br(htmlspecialchars($data['Common_Name'])); ?> </td>
+                        <td> <?= nl2br(htmlspecialchars($data['tipe_lisensi'])); ?> </td>
+                        <td> <?= date('d-m-Y', strtotime($data['start_ats'])); ?> </td>
+                        <td> <?= date('d-m-Y', strtotime($data['end_ats'])); ?> </td>
                         <td> <?= date('d-m-Y', strtotime($data['Expiration'])); ?> </td>
+                        <td> <?= nl2br(htmlspecialchars($data['versi'])); ?> </td>
                         <td>
                             <center>
                                 <a class="btn btn-outline-success btn-sm"

@@ -37,11 +37,16 @@ function tambah($data)
 
     // htmlspecialchars() = agar tag html di program tidak akan dijalankan
     $name = htmlspecialchars($data['name']);
-    $contents = htmlspecialchars($data['contents']);
+    $jenis = htmlspecialchars($data['jenis']);
+    $tipe_lisensi = htmlspecialchars($data['tipe_lisensi']);
     $Common_Name = htmlspecialchars($data['Common_Name']);
     $Expiration = date($data['Expiration']);
-       
-    $sql = "INSERT INTO ngtm01 VALUES ('', '$name', '$contents', '$Common_Name',  '$Expiration')";
+    $status = htmlspecialchars($data['status']);
+    $start_ats = date($data['start_ats']);
+    $end_ats = date($data['end_ats']);
+    $versi = htmlspecialchars($data['versi']);
+
+    $sql = "INSERT INTO ngtm01 VALUES ('', '$name', '$jenis', '$tipe_lisensi', '$Common_Name',  '$Expiration', '$status', '$start_ats', '$end_ats', '$versi')";
 
     mysqli_query($koneksi, $sql);
 
@@ -56,9 +61,14 @@ function edit($data)
     $id = $data['id'];
     // htmlspecialchars() = agar tag html di program tidak akan dijalankan
     $name = htmlspecialchars($data['name']);
-    $contents = htmlspecialchars($data['contents']);
+    $jenis = htmlspecialchars($data['jenis']);
+    $tipe_lisensi = htmlspecialchars($data['tipe_lisensi']);
     $Common_Name = htmlspecialchars($data['Common_Name']);
     $Expiration = date($data['Expiration']);
+    $status = htmlspecialchars($data['status']);
+    $start_ats = date($data['start_ats']);
+    $end_ats = date($data['end_ats']);
+    $versi = htmlspecialchars($data['versi']);
     
     //cek apakah user upload foto baru atau tidak
     
@@ -66,9 +76,14 @@ function edit($data)
     $sql = "UPDATE ngtm01 SET 
     
                 name = '$name',
-                contents = '$contents',
+                jenis = '$jenis',
+                tipe_lisensi = '$tipe_lisensi',
                 Common_Name = '$Common_Name',
-                Expiration = '$Expiration'
+                Expiration = '$Expiration',
+                status = '$status',
+                start_ats = '$start_ats',
+                end_ats = '$end_ats',
+                versi = '$versi'
                 
             WHERE id = $id ";
 
@@ -174,11 +189,15 @@ function pencarian($katakunci)
     $query = "SELECT * FROM ngtm01
                 WHERE
 				name LIKE '%$katakunci%' OR
-				contents LIKE '%$katakunci%' OR
+				jenis LIKE '%$katakunci%' OR
+				tipe_lisensi LIKE '%$katakunci%' OR
 				Common_Name LIKE '%$katakunci%' OR
 				Quantity LIKE '%$katakunci%' OR
 				Expiration LIKE '%$katakunci%' OR
-				End_Date LIKE '%$katakunci%'
+				status LIKE '%$katakunci%' OR
+				start_ats LIKE '%$katakunci%' OR
+				end_ats LIKE '%$katakunci%' OR
+				versi LIKE '%$katakunci%'
             ";
     
     // mengembalikkan fungsi yg sudah di buat(function query) di dalam fungsi pencarian

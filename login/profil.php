@@ -34,7 +34,7 @@ if (isset($_POST['cari'])) {
         <form action="" method="POST" class="pull-right position search_inbox">
             <div class="input-append">
                 <input type="text" class="sr-input" placeholder="Search" name="katakunci">
-                <button class="btn sr-btn" type="SUBMIT" name="cari"><i class="fa fa-search"></i></button </div>
+                <button class="btn sr-btn" type="SUBMIT" name="cari"><i class="fa fa-search"></i></button> </div>
         </form>
         <br><br>
         <div class="adv-table">
@@ -52,9 +52,6 @@ if (isset($_POST['cari'])) {
                             <center>Email</center>
                         </th>
                         <th>
-                            <center>Password</center>
-                        </th>
-                        <th>
                             <center>Level</center>
                         </th>
                         <th>
@@ -70,7 +67,6 @@ if (isset($_POST['cari'])) {
                             <td> <?= nl2br(htmlspecialchars($data['name'])); ?> </td>
                             <td> <?= nl2br(htmlspecialchars($data['username'])); ?> </td>
                             <td> <?= nl2br(htmlspecialchars($data['email'])); ?> </td>
-                            <td> <?= nl2br(htmlspecialchars($data['password'])); ?> </td>
                             <td> <?= nl2br(htmlspecialchars($data['level'])); ?> </td>
                             <td>
                                 <center>

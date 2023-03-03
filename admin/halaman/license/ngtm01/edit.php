@@ -30,14 +30,14 @@ if( isset($_POST['tambah'] ) ) {
 
 <div class="row mt">
     <div class="col-lg-12">
-        <h4><i class="fa fa-angle-right"></i> Edit License NGTM01</h4>
+        <h4><i class="fa fa-angle-right"></i> Edit License DNS</h4>
         <div class="form-panel">
             <div class=" form">
                 <form class="cmxform form-horizontal style-form" id="commentForm" method="POST" action=""
                     enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?= $data['id']; ?>">
                     <div class="form-group ">
-                        <label for="cname" class="control-label col-lg-2">Name</label>
+                        <label for="cname" class="control-label col-lg-2">Nama</label>
                         <div class="col-lg-10">
                             <input class=" form-control" id="name"
                                 value="<?= $data['name']; ?>" name="name" type="text"
@@ -45,18 +45,25 @@ if( isset($_POST['tambah'] ) ) {
                         </div>
                     </div>
                     <div class="form-group ">
-                        <label for="cname" class="control-label col-lg-2">Contents</label>
+                        <label for="cname" class="control-label col-lg-2">DNS</label>
                         <div class="col-lg-10">
-                            <input class=" form-control" id="contents"
-                                value="<?= $data['contents']; ?>" name="contents" type="text"
+                            <input class=" form-control" id="Common_Name"
+                                value="<?= $data['Common_Name']; ?>" name="Common_Name" type="text"
                                 required />
                         </div>
                     </div>
                     <div class="form-group ">
-                        <label for="cname" class="control-label col-lg-2">Common Name</label>
+                        <label for="cname" class="control-label col-lg-2">Jenis</label>
                         <div class="col-lg-10">
-                            <input class=" form-control" id="Common_Name" value="<?= $data['Common_Name']; ?>"
-                                name="Common_Name" type="text" required />
+                            <input class=" form-control" id="jenis" value="<?= $data['jenis']; ?>"
+                                name="jenis" type="text" required />
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Tipe Lisensi</label>
+                        <div class="col-lg-10">
+                            <input class=" form-control" id="tipe_lisensi" value="<?= $data['tipe_lisensi']; ?>"
+                                name="tipe_lisensi" type="text" required />
                         </div>
                     </div>
                     <div class="form-group">
@@ -71,6 +78,48 @@ if( isset($_POST['tambah'] ) ) {
                                 </span>
                             </div>
                             <span class="help-block">Select date</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Status</label>
+                        <div class="col-lg-10">
+                            <input class=" form-control" id="status" value="<?= $data['status']; ?>"
+                                name="status" type="text" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Mulai ATS</label>
+                        <div class="col-md-3 col-xs-11">
+                            <div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="2020-01-01"
+                                class="input-append date dpYears">
+                                <input type="text" readonly="" value="<?= $data['start_ats']; ?>" size="16" class="form-control"
+                                    name="start_ats">
+                                <span class="input-group-btn add-on">
+                                    <button class="btn btn-theme" type="button"><i class="fa fa-calendar"></i></button>
+                                </span>
+                            </div>
+                            <span class="help-block">Select date</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Akhir ATS</label>
+                        <div class="col-md-3 col-xs-11">
+                            <div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="2020-01-01"
+                                class="input-append date dpYears">
+                                <input type="text" readonly="" value="<?= $data['end_ats']; ?>" size="16" class="form-control"
+                                    name="end_ats">
+                                <span class="input-group-btn add-on">
+                                    <button class="btn btn-theme" type="button"><i class="fa fa-calendar"></i></button>
+                                </span>
+                            </div>
+                            <span class="help-block">Select date</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Versi</label>
+                        <div class="col-lg-10">
+                            <input class=" form-control" id="versi" value="<?= $data['versi']; ?>"
+                                name="versi" type="text" required />
                         </div>
                     </div>
                     <div class="form-group">

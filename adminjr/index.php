@@ -117,13 +117,50 @@
               <span>DNS</span>
             </a>
             <ul class="sub">
-              <li><a href="index.php?page=ngtm01">NGTM01</a></li>
-              <li><a href="index.php?page=fortianalyzer">FORTIANALYZER</a></li>
+              <li><a href="index.php?page=ngtm01">SSL DNS</a></li>
+              <li><a href="index.php?page=fortianalyzer">PERANGKAt</a></li>
+            </ul>
+          </li>
+          <li>
+            Product
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+            <i class="fa-sharp fa-solid fa-cube"></i>
+              <span>Peruri CODE</span>
+            </a>
+            <ul class="sub">
+              <li><a href="index.php?page=eartag">EARTAG</a></li>
+              <li><a href="index.php?page=shield">SHIELD</a></li>
+              <li><a href="index.php?page=keyla">KEYLA</a></li>
+              <li><a href="index.php?page=qr">QR</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-signature"></i>
+              <span>Peruri SIGN</span>
+            </a>
+            <ul class="sub">
+              <li><a href="index.php?page=sign">
+              <i class="fa fa-signature"></i>PERISAI</a></li>
+              <li><a href="index.php?page=meterai">
+              <i class="fa-sharp fa-solid fa-pager"></i>MATERAI</a></li>
+              <li><a href="index.php?page=tera">
+              <i class="fa-sharp fa-regular fa-stamp"></i>TERA</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+            <i class="fa sharp fa-solid fa-shield-halved"></i>
+              <span>Peruri Trust</span>
+            </a>
+            <ul class="sub">
+              <li><a href="index.php?page=trust">Track & Trace</a></li>
             </ul>
           </li>
 
           <li class="sub-menu">
-
             <ul class="sub">
               <li class="sub">
               </li>
@@ -176,6 +213,137 @@
             case 'updatediri';
               include "../login/updatediri.php";
               break;
+
+              case 'trust':
+              include "halaman/product/trust/trust.php";
+              break;
+            case 'detailtrust':
+              include "halaman/product/trust/detail.php";
+              break;
+            case 'edittrust':
+              include "halaman/product/trust/edit.php";
+              break;
+            case 'deletetrust':
+              include "halaman/product/trust/delete.php";
+              break;
+              case 'tambahtrust':
+                include "halaman/product/trust/tambah.php";
+                break;
+
+            case 'sign':
+              include "halaman/product/sign/sign.php";
+              break;
+            case 'detailsign':
+              include "halaman/product/sign/detail.php";
+              break;
+            case 'editsign':
+              include "halaman/product/sign/edit.php";
+              break;
+            case 'deletesign':
+              include "halaman/product/sign/delete.php";
+              break;
+              case 'tambahsign':
+                include "halaman/product/sign/tambah.php";
+                break;
+
+            case 'shield':
+              include "halaman/product/shield/shield.php";
+              break;
+            case 'detailshield':
+              include "halaman/product/shield/detail.php";
+              break;
+            case 'editshield':
+              include "halaman/product/shield/edit.php";
+              break;
+            case 'deleteshield':
+              include "halaman/product/shield/delete.php";
+              break;
+              case 'tambahshield':
+                include "halaman/product/shield/tambah.php";
+                break;
+
+            case 'qr':
+              include "halaman/product/qr/qr.php";
+              break;
+            case 'detailqr':
+              include "halaman/product/qr/detail.php";
+              break;
+            case 'editqr':
+              include "halaman/product/qr/edit.php";
+              break;
+            case 'deleteqr':
+              include "halaman/product/qr/delete.php";
+              break;
+              case 'tambahqr':
+                include "halaman/product/qr/tambah.php";
+                break;
+
+            case 'keyla':
+              include "halaman/product/keyla/keyla.php";
+              break;
+            case 'detailkeyla':
+              include "halaman/product/keyla/detail.php";
+              break;
+            case 'editkeyla':
+              include "halaman/product/keyla/edit.php";
+              break;
+            case 'deletekeyla':
+              include "halaman/product/keyla/delete.php";
+              break;
+              case 'tambahkeyla':
+                include "halaman/product/keyla/tambah.php";
+                break;
+
+            case 'exporteartag':
+              include "halaman/product/eartag/export.php";
+              break;
+            case 'eartag':
+              include "halaman/product/eartag/eartag.php";
+              break;
+            case 'detaileartag':
+              include "halaman/product/eartag/detail.php";
+              break;
+            case 'editeartag':
+              include "halaman/product/eartag/edit.php";
+              break;
+            case 'deleteeartag':
+              include "halaman/product/eartag/delete.php";
+              break;
+            case 'tambaheartag':
+              include "halaman/product/eartag/tambah.php";
+              break;
+
+            case 'meterai':
+              include "halaman/product/meterai/meterai.php";
+              break;
+            case 'detailmeterai':
+              include "halaman/product/meterai/detail.php";
+              break;
+            case 'editmeterai':
+              include "halaman/product/meterai/edit.php";
+              break;
+            case 'deletemeterai':
+              include "halaman/product/meterai/delete.php";
+              break;
+              case 'tambahmeterai':
+                include "halaman/product/meterai/tambah.php";
+                break;
+
+            case 'tera':
+              include "halaman/product/tera/tera.php";
+              break;
+            case 'detailtera':
+              include "halaman/product/tera/detail.php";
+              break;
+            case 'edittera':
+              include "halaman/product/tera/edit.php";
+              break;
+            case 'deletetera':
+              include "halaman/product/tera/delete.php";
+              break;
+              case 'tambahtera':
+                include "halaman/product/tera/tambah.php";
+                break;
 
             case 'profil':
               include "../login/profil.php";

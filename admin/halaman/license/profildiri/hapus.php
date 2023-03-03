@@ -7,11 +7,11 @@ $id = $_GET['id'];
 if( delete($id) > 0 ) {
     echo "<script>
             alert('Delete data success!');
-            document.location.href = 'index.php?page=paloalto';
+            document.location.href = 'index.php?page=profil';
         </script>";
 } else {
 echo "<script>
         alert('Delete data Gagal!');
-        document.location.href = 'index.php?page=inputpaloalto';
+        document.location.href = 'index.php?page=profil';
     </script>";
 }

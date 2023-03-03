@@ -28,10 +28,10 @@ if( isset($_POST['tambah'] ) ) {
   <link rel="stylesheet" type="text/css" href="lib/bootstrap-timepicker/compiled/timepicker.css" />
   <link rel="stylesheet" type="text/css" href="lib/bootstrap-datetimepicker/datertimepicker.css" />
   
-<h3 style="text-align: center;">NGTM01 LICENSE</h3>
+<h3 style="text-align: center;">SSL DNS LICENSE</h3>
 <div class="row mt">
     <div class="col-lg-12">
-        <h4><i class="fa fa-angle-right"></i> Input License NGTM01</h4>
+        <h4><i class="fa fa-angle-right"></i> Input Lisensi SSL DNS</h4>
         <div class="form-panel">
             <div class=" form">
                 <form class="cmxform form-horizontal style-form" id="commentForm" method="POST" action="" enctype="multipart/form-data">
@@ -43,14 +43,21 @@ if( isset($_POST['tambah'] ) ) {
                         </div>
                     </div>
                     <div class="form-group ">
-                        <label for="cname" class="control-label col-lg-2">Contents</label>
+                        <label for="cname" class="control-label col-lg-2">Jenis</label>
                         <div class="col-lg-10">
-                            <input class=" form-control" id="contents" name="contents" 
+                            <input class=" form-control" id="jenis" name="jenis" 
                                 type="text" required />
                         </div>
                     </div>
                     <div class="form-group ">
-                        <label for="cname" class="control-label col-lg-2">Common Name</label>
+                        <label for="cname" class="control-label col-lg-2">Tipe Lisensi</label>
+                        <div class="col-lg-10">
+                            <input class=" form-control" id="tipe_lisensi" name="tipe_lisensi" 
+                                type="text" required />
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">DNS</label>
                         <div class="col-lg-10">
                             <input class=" form-control" id="Common_Name" name="Common_Name" 
                                 type="text" required />
@@ -68,6 +75,48 @@ if( isset($_POST['tambah'] ) ) {
                                 </span>
                             </div>
                             <span class="help-block">Select date</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Status</label>
+                        <div class="col-lg-10">
+                            <input class=" form-control" id="status" name="status" 
+                                type="text" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Mulai ATS</label>
+                        <div class="col-md-3 col-xs-11">
+                            <div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="2020-01-01"
+                                class="input-append date dpYears">
+                                <input type="text" readonly="" value="01-01-2014" size="16" class="form-control"
+                                    name="start_ats">
+                                <span class="input-group-btn add-on">
+                                    <button class="btn btn-theme" type="button"><i class="fa fa-calendar"></i></button>
+                                </span>
+                            </div>
+                            <span class="help-block">Select date</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Akhir ATS</label>
+                        <div class="col-md-3 col-xs-11">
+                            <div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="2020-01-01"
+                                class="input-append date dpYears">
+                                <input type="text" readonly="" value="01-01-2014" size="16" class="form-control"
+                                    name="end_ats">
+                                <span class="input-group-btn add-on">
+                                    <button class="btn btn-theme" type="button"><i class="fa fa-calendar"></i></button>
+                                </span>
+                            </div>
+                            <span class="help-block">Select date</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="cname" class="control-label col-lg-2">Versi</label>
+                        <div class="col-lg-10">
+                            <input class=" form-control" id="versi" name="versi" 
+                                type="text" required />
                         </div>
                     </div>
                     <div class="form-group">
